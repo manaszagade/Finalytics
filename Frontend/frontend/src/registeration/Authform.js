@@ -96,18 +96,19 @@ class Authform extends React.Component{
 
             {this.state.isregister &&
               <><label>
-                            First Name:
-                            <input type="text" value={this.state.firstname} onChange={this.handleFnameChange} required />
+                        First Name:
                         </label><br />
-                      
+
+                            <input type="text" value={this.state.firstname} onChange={this.handleFnameChange} required />
+                            <br />
                 </>
                 
                 }
                           {this.state.isregister &&
               <><label>
-                            Last Name:
+                            Last Name:</label><br />
                             <input type="text" value={this.state.lastname} onChange={this.handleLnameChange} required />
-                        </label><br />
+                            <br />
                   
                 </>
                 
@@ -115,33 +116,39 @@ class Authform extends React.Component{
 
     
               <label>
-                Email:
+                Email: 
+                </label>
+                <br />
                 <input type="email" value={this.state.authdata.email} onChange={this.handleEmailChange} required />
-              </label>
-              <br />
+                <br />
              
               <label>
-                Password:
+                Password:  </label>
+                <br />
                 <input type="password" value={this.state.authdata.password} onChange={this.handlePasswordChange} required />
-              </label>
-              <br />
+                <br />
 
 
               {this.state.isregister &&
               <><label>
-                            Confirm password:
+                            Confirm password: </label>
+                            <br/>
                             <input type="password" value={this.state.confirmpassword} onChange={this.handleConfirmPasswordChange} required />
 
                             {this.state.error && <p style={{ color: 'red' }} >  Passwords do not match !</p> }      
 
-                        </label>
+                       
                 </>
                 
                 }
              <br/>
-             
-              <button type="submit">Sign Up</button>
-            
+             {this.state.isregister &&<>              <button  class='card-button' type="submit">Sign Up</button>
+              </>
+    }             {
+      !this.state.isregister &&<>              <button class='card-button' type="submit">Login</button>
+      </>
+}
+    
             
             </form>
           </div>

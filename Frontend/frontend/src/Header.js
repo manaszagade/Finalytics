@@ -4,8 +4,8 @@ import Toolbar from "@mui/material/Toolbar";
 export default function Header()
 {
     return(
-<AppBar position='static'>
-<Toolbar>
+<AppBar position='static' >
+<Toolbar class='header'>
 
 </Toolbar>
 </AppBar>

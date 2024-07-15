@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       
       
-      <Homepage isregister={true}/>
+      <Homepage isregister={false}/>
     </div>
 
 

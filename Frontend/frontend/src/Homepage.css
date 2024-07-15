@@ -1,0 +1,133 @@
+/* Ensure the body and html take the full height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+
+  background-color: rgb(255, 255, 255);
+
+  flex: 0 0 100px; /* Adjust the height as needed */
+}
+.Footer{
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  height: 100px;
+  text-align: center;
+
+  flex: 0 0 100px; 
+
+}
+
+
+.wrap {
+  display: flex;
+  flex: 1; /* This will make the wrap take up all remaining space */
+}
+
+.fleft, .fright {
+
+  width: 50%;
+  height: 750px;
+}
+
+.fleft {
+  background: #C3C3C3;
+  align-items: center;
+  width: 50%;
+  display: flex;
+  justify-content: center
+}
+
+.fright {
+  background: #2C2C2C;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:#C3C3C3;
+  justify-content: center;
+}
+.rmessgae{
+padding-top: 20%;
+padding-left: 10%;
+padding-right: 10%;
+}
+
+.card {
+text-align: left;
+  position: relative;
+  background-color: #fff;
+  width: 350px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  transition: transform 0.2s;
+  padding: 10px;
+  overflow: hidden;
+}
+
+form {
+  background-color: white;
+  max-width: 100%; /* Ensure the form does not exceed the width of its container */
+  max-height: 100%; /* Ensure the form does not exceed the height of its container */
+  padding-top: 40px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+.card-button {
+
+  background-color: #2C2C2C;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center; /* Center align the button */
+  width: 200px;
+  
+}
+
+
+
+
+.card-content {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+label
+{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 75%;
+  margin-bottom: 6px;
+}
+
+input {
+  padding: 8px;
+  margin-top: 8px;
+  width: 250px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
