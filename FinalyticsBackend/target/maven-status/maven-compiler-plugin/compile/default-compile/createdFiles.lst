@@ -1,0 +1,5 @@
+com/zags/FinalyticsBackend/FinalyticsBackendApplication.class
+com/zags/FinalyticsBackend/Models/User.class
+com/zags/FinalyticsBackend/Controllers/signupcontroller.class
+com/zags/FinalyticsBackend/Repository/UserRepository.class
+com/zags/FinalyticsBackend/Service/RegisterService.class
