@@ -8,9 +8,4 @@ import com.zags.FinalyticsBackend.Models.User;
 @Repository
 public interface UserRepository extends JpaRepository<User,String>{
 
-
-    
-
-    
-
 }

@@ -1,15 +1,20 @@
 package com.zags.FinalyticsBackend.Models;
 
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
+import java.util.Collection;
+import java.util.List;
+
 
 @Component
 @Entity
-public class User {
+public class User implements UserDetails {
 
     private String fname;
     private String lname;
@@ -41,8 +46,18 @@ public class User {
         this.email = email;
     }
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of();
+    }
+
     public String getPassword() {
         return password;
+    }
+
+    @Override
+    public String getUsername() {
+        return this.email;
     }
 
     public void setPassword(String password) {

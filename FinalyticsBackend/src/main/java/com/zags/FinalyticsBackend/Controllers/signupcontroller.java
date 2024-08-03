@@ -1,5 +1,6 @@
 package com.zags.FinalyticsBackend.Controllers;
 
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,22 +9,31 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.zags.FinalyticsBackend.Models.User;
-import com.zags.FinalyticsBackend.Service.RegisterService;
+import com.zags.FinalyticsBackend.Service.MyUserDetailService;
 
 @RestController
 public class signupcontroller {
 
     @Autowired
-    RegisterService registerService;
-
+    MyUserDetailService registerService;
+@RequestMapping("/login")
+public String Hello()
+{
+    return "Hello";
+}
+    @RequestMapping("/")
+    public String m()
+    {
+        return "Main";
+    }
     @PostMapping("/register")
     public ResponseEntity<String> Register(@RequestBody User entity) {
         
         System.out.println("Hit register in controller ");
         
         String message="";
-        registerService.registerUser(entity);        
-        Integer code = registerService.registerUser(entity);
+        registerService.Signup(entity);
+        Integer code = registerService.Signup(entity);
 
         if(code == 400)
         {
