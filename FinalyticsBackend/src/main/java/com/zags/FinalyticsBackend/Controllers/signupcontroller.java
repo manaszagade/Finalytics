@@ -54,7 +54,7 @@ public class signupcontroller {
         }
 
         final UserDetails userDetails = myUserDetailService.loadUserByUsername(authreq.getEmail());
-        System.out.println("userdetails"+ userDetails.getUsername());
+        System.out.println("user details"+ userDetails.getUsername());
         final  String jwt = jwtUtil.generateToken(userDetails);
     return ResponseEntity.ok(new AuhenticationResponse(jwt));
     }
@@ -65,7 +65,7 @@ public class signupcontroller {
         
         System.out.println("Hit register in controller ");
         
-        String message="";
+        String message;
         myUserDetailService.Signup(entity);
         Integer code = myUserDetailService.Signup(entity);
 
