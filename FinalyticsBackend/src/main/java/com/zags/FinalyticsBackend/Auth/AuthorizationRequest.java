@@ -1,10 +1,13 @@
-package com.zags.FinalyticsBackend;
+package com.zags.FinalyticsBackend.Auth;
 
 public class AuthorizationRequest {
     private String email;
     private String password;
 
-    public AuthorizationRequest(String email,String password)
+    public AuthorizationRequest() {
+    }
+
+    public AuthorizationRequest(String email, String password)
     {
         this.email=email;
         this.password=password;
