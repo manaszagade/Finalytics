@@ -18,7 +18,8 @@ function Homepage(props) {
         setIsRegister(false);
 
     }
-    
+        console.log('isRegister:', isRegister); // Add this to debug the state
+
         return( 
             <div className="homepage">
 
@@ -32,14 +33,18 @@ function Homepage(props) {
 
                     <div class="card">
                         <div class="card-content">
-                        {isRegister ? <Signup /> : <Login />}
-                          
+                            {isRegister ?
+                                <Signup key="signup" isRegister={isRegister} setIsRegister={setIsRegister} /> :
+                                <Login key="login" isRegister={isRegister} setIsRegister={setIsRegister}/>
+                            }
                             
 
                             <Divider><Typography>or</Typography></Divider>
                             <br></br>
-                            {isRegister? <button class="card-button" onClick={handleLogin}>Login</button>:<button class="card-button" onClick={handleCreate}>Create Account</button>}
-                            
+{isRegister ?
+                                <button class="card-button" onClick={handleLogin}>Login</button> :
+                                <button class="card-button" onClick={handleCreate}>Create Account</button>}
+
                             <br/>
                             <br/>
                         </div>

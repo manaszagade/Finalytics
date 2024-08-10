@@ -4,10 +4,13 @@ import Authform from './Authform';
 class Signup extends React.Component {
 
   render() {
+      console.log('Rendering Signup component with isRegister:', this.props.isRegister);
+
     return (
+
       <div>
  
-       <Authform isregister= {true}/>
+       <Authform isRegister={this.props.isRegister} setIsRegister={this.props.setIsRegister} />
       </div>
     );
   }
